@@ -1,0 +1,51 @@
+﻿<Window x:Class="Test1_Base.MainWindow"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Test1_Base"
+        xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        mc:Ignorable="d"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        x:Name="MainProjectWindow"
+        WindowStartupLocation="CenterScreen"
+        MinHeight="600" MinWidth="900" Height="600" Width="900"
+        Closed="MainProjectWindow_Closed"
+        Title="SoundScapePlayer">
+
+    <Grid Style="{StaticResource grid}" x:Name="mainGrid">
+
+        <Frame x:Name="playlistFrame" NavigationUIVisibility="Hidden"/>
+
+        <Grid>
+            
+            <Button x:Name="home" HorizontalAlignment="Left" Click="home_Click" Margin="8"
+                    ToolTip="Главная страница" VerticalAlignment="Top">
+                <materialDesign:PackIcon Kind="Home"/>
+            </Button>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top">
+
+                <Button Style="{StaticResource MaterialDesignFlatButton}" Content="Помощь" VerticalAlignment="Top" Margin="8" Click="help_Click"/>
+
+                <Button Style="{StaticResource MaterialDesignFlatButton}" Content="О программе" VerticalAlignment="Top" Margin="8" Click="about_Click"/>
+
+                <Button x:Name="profile" ToolTip="Профиль" Click="profile_Click" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="8" >
+                    <materialDesign:PackIcon Kind="Face"/>
+                </Button>
+
+            </StackPanel>
+            
+        </Grid>
+
+
+
+    </Grid>
+</Window>

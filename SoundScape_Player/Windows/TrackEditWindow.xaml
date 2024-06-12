@@ -1,0 +1,28 @@
+﻿<Window x:Class="Test1_Base.Windows.TrackEditWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Test1_Base.Windows"
+        mc:Ignorable="d"
+        Title="Редактирование метаданных файла" Height="200" Width="300"
+        Name="trackEditWindow">
+    
+    <Grid Style="{StaticResource grid}">
+        
+        <StackPanel Orientation="Vertical">
+
+            <TextBlock Text="Название:" Margin="10, 0"/>
+            <TextBox FontSize="16" Margin="5, 0"
+                Text="{Binding DataContext.Title, ElementName=trackEditWindow, Mode=TwoWay}"/>
+
+            <TextBlock Text="Автор:" Margin="10, 0"/>
+            <TextBox FontSize="16" Margin="5, 0"
+                Text="{Binding DataContext.Author, ElementName=trackEditWindow, Mode=TwoWay}"/>
+
+            <Button Content="Сохранить изменения" Margin="15" Click="Button_Click"/>
+
+        </StackPanel>
+        
+    </Grid>
+</Window>
